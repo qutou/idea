@@ -1,0 +1,62 @@
+<templateSet group="user">
+  <template name="out" value="System.out.println($END$)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="pfs" value="private final static String $varName$  = &quot;$var$&quot;;`" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="varName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="pfd" value="/**&#10;* $COMMENT$&#10;*/&#10;@Getter&#10;@Setter&#10;private $TYPE$ $NAME$;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="COMMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="main" value="public static void main(String[] args) {&#10;     $END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="getp" value="@GetMapping&#10;public ResponseValue getPageList(IPage page) {&#10;    $END$&#10;    return new ResponseValue();&#10;}" description="get page 请求 带请求参数" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="post" value="@PostMapping&#10;public ResponseValue save(@RequestBody $END$)&#10;{&#10;    return new ResponseValue();&#10;}" description="保存对象" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="put" value="@PutMapping&#10;public ResponseValue update(@RequestBody $END$ object)&#10;{&#10;    return new ResponseValue();&#10;}" description="修改参数" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="getpi" value="@GetMapping&#10;public ResponseValue getPageList(@PageableDefault IPage page, @RequestParm Map&lt;String,String&gt; params) {&#10;    return new ResponseValue();&#10;}" description="分页 带参数" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="delete" value="@DeleteMapping(&quot;{id}&quot;)&#10;public ResponseValue deleteById(@PathVariable(&quot;id&quot;) String id)&#10;{&#10;    $END$&#10;    return new ResponseValue();&#10;}" description="删除对象" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="geti" value="@GetMapping&#10;public ResponseValue getList(@RequestParam Map&lt;String,String&gt; params) {&#10;    $END$&#10;    return new ResponseValue();&#10;}" description="查询 带参数" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="geto" value="@GetMapping(&quot;{id}&quot;)&#10;public ResponseValue&lt;&gt; getInfo(@PathVariable(&quot;id&quot;) String id)&#10;{&#10;    $END$&#10;    return new ResponseValue();&#10;}" description="根据id查询对象" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
